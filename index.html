@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Monitoring Web App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <header>
+      <h1 class="text-center mt-5 mb-3">Baby Monitoring Web App</h1>
+      <p class="text-center mb-5">Note: This web app uses a COCO-SSD model for object detection. Enter the name of the object you want to search for in the input below and click Start.</p>
+    </header>
+    <main>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <input type="text" class="form-control mb-3" id="objectName" placeholder="Enter object name">
+          <button class="btn btn-primary btn-block" onclick="start()">Start</button>
+          <p class="status" id="modelStatus"></p>
+          <p class="status" id="objectStatus"></p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <canvas id="canvas"></canvas>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ml5/0.7.2/ml5.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
